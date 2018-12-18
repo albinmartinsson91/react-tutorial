@@ -3,7 +3,7 @@ import Message from './Message';
 import Counter from './Counter';
 import Input from './Input';
 import StopWatch from './StopWatch';
-import Tilt from './Tilt';
+import Form from './Form';
 
 class App extends Component {
   render() {
@@ -23,7 +23,7 @@ class App extends Component {
                     <StopWatch />
                 </div>
                  <div className="border-b p-8 items-center justify-center">
-                    <Tilt />
+                    <Form />
                 </div>
             </div>
         </div>

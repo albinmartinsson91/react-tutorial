@@ -6117,12 +6117,6 @@ table {
   z-index: auto;
 }
 
-/* Your custom CSS here */
-
-.body {
-  background: red;
-}
-
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;

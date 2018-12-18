@@ -9,13 +9,11 @@ class Input extends React.Component {
         this.state = { 
         	text: 'Albin'
         };
-		//This is somehow needed in order to update the value
-        this.updateText = this.updateText.bind(this);
     }
 
 	//Here we use an arrow function to be able to use this.setState
-	//The function accepts event 
-	updateText = (event) => {
+	//The arrow function accepts event 
+	updateText = event => {
 		//We access the current state and updates with event(onChange)target.value(input value field)
 		this.setState({text: event.target.value});
 	}
