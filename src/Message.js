@@ -5,7 +5,7 @@ class Message extends React.Component {
  		console.log('Component Mounted');
  	}
 	render() {
-		return <h2 class="text-blue">{this.props.message ? this.props.message : 'Blankt Statement'}</h2>
+		return <h2 className="text-blue">{this.props.message ? this.props.message : 'Blankt Statement'}</h2>
 	}
 }
 
