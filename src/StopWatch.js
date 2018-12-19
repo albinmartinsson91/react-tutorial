@@ -34,7 +34,6 @@ class StopWatch extends React.Component {
 			//Here we actually set the state based on whether it's set or not. Returns true or false.
 			return {running: !state.running}
 		})
-   
     }
 
     handleClearClick = () => {

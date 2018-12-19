@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
 class Input extends React.Component {
-
+	
 	constructor(props) {
         super(props);
-
         //Set current state. Add more state data and separate by comma
         this.state = { 
         	text: 'Albin'
