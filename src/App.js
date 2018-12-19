@@ -4,6 +4,7 @@ import Counter from './Counter';
 import Input from './Input';
 import StopWatch from './StopWatch';
 import Form from './Form';
+import FormField from './FormField';
 
 class App extends Component {
   render() {
@@ -22,8 +23,11 @@ class App extends Component {
                 <div className="border-b p-8 items-center justify-center">
                     <StopWatch />
                 </div>
-                 <div className="border-b p-8 items-center justify-center">
+                <div className="border-b p-8 items-center justify-center">
                     <Form />
+                </div>
+                <div className="border-b p-8 items-center justify-center">
+                    <FormField listName="Listan" />
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 class Form extends React.Component {
 
@@ -21,7 +21,7 @@ class Form extends React.Component {
 			<form className="" onSubmit={this.handleSubmit}>
 					<label htmlFor="" className="mb-2 block">Label</label>
 					<input type="text" name="username" className="p-4 border rounded w-full mb-2"/>
-					<span className={this.state.username == '' ? 'w-full hidden' : 'w-full block mb-2'} >You entered: {this.state.username} </span>
+					<span className={this.state.username === '' ? 'w-full hidden' : 'w-full block mb-2'} >You entered: {this.state.username} </span>
 					<button type="submit" className="p-3 bg-blue-light rounded">Submit</button>
 			</form>
 		)
