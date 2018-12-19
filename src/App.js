@@ -5,6 +5,8 @@ import Input from './Input';
 import StopWatch from './StopWatch';
 import Form from './Form';
 import FormField from './FormField';
+import List from './List';
+import Request from './Request';
 
 class App extends Component {
   render() {
@@ -27,7 +29,13 @@ class App extends Component {
                     <Form />
                 </div>
                 <div className="border-b p-8 items-center justify-center">
-                    <FormField listName="Listan" />
+                    <FormField />
+                </div>
+                <div className="border-b p-8 items-center justify-center">
+                    <List />
+                </div>
+                <div className="border-b p-8 items-center justify-center">
+                    <Request />
                 </div>
             </div>
         </div>
