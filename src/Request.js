@@ -34,7 +34,7 @@ class Request extends React.Component {
 				}`,
 			},
 			headers: {
-				Authorization: `bearer 54a40e66de9e83ab332c027d07daee04f755754e`,
+				Authorization: `bearer 97ea05d8bbbedc430c015ab240bece2257047421`,
 			},
     	}).then(response => {
     		console.log(response)
