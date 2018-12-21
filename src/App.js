@@ -43,7 +43,7 @@ class App extends Component {
                 </header>
                 <main>
                     <PoseGroup>
-                        <RouteContainer key={this.props.location.key}>
+                        <RouteContainer key={this.props.location.pathname}>
                             <Switch location={this.props.location}>
                                 <Route component={Home} exact path="/" />
                                 <Route component={About} path="/about" />
