@@ -1,11 +1,6 @@
 import React from 'react';
 
 class User extends React.Component {
-
-	constructor(props) {
-        super(props);
-    }
-
 	render() {
 		return (
 			<div className="container p-8">
@@ -14,9 +9,9 @@ class User extends React.Component {
 						<div className="px-3">
 							<img className="h-24 w-24 rounded" src={this.props.user.avatar_url} alt=""/>
 						</div>
-						<div className="content px-3">
+						<div className="content px-3 flex-1">
 							<h2>{this.props.user.name}</h2>
-							<div class="mt-1">
+							<div className="mt-1">
 								<span>{this.props.user.location}</span>
 								<span className="mx-2">|</span>
 								<span>{this.props.user.company}</span>

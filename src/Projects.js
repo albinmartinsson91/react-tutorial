@@ -7,14 +7,10 @@ import Request from './Request';
 
 class Projects extends React.Component {
 
-	constructor(props) {
-        super(props);
-    }
-
 	render() {
 		return (
 			<div className="container">
-				<h1 className="p-8">Cool Stuff 🎡</h1>
+				<h1 className="p-8">Cool Stuff</h1>
                 <div className="border-b p-8 items-center justify-center">
                     <Form />
                 </div>
