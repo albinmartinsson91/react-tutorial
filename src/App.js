@@ -34,14 +34,14 @@ class App extends Component {
         return (
             <div>
                 <header className="p-8">
-                    <NavLink activeClassName="bg-blue" exact to="/" className="mr-2">Home</NavLink>
-                    <NavLink activeClassName="bg-blue" to="/about" className="mr-2">About</NavLink>
-                    <NavLink activeClassName="bg-blue" to="/projects" className="mr-2">Projects</NavLink>
-                    <NavLink activeClassName="bg-blue" to="/tabs" className="mr-2">Tabs</NavLink>
-                    <NavLink activeClassName="bg-blue" to="/page/davidohlin" className="mr-2">David</NavLink>
-                    <NavLink activeClassName="bg-blue" to="/page/sebastiansson" className="mr-2">Sebastian</NavLink>
-                    <NavLink activeClassName="bg-blue" to="/page/albinmartinsson91" className="mr-2">Albin</NavLink>
-                    <NavLink activeClassName="bg-blue" to="/error" className="mr-2">404</NavLink>
+                    <NavLink activeClassName="font-bold" exact to="/" className="mr-2 text-black no-underline">Home</NavLink>
+                    <NavLink activeClassName="font-bold" to="/about" className="mr-2 text-black no-underline">About</NavLink>
+                    <NavLink activeClassName="font-bold" to="/projects" className="mr-2 text-black no-underline">Projects</NavLink>
+                    <NavLink activeClassName="font-bold" to="/tabs" className="mr-2 text-black no-underline">Tabs</NavLink>
+                    <NavLink activeClassName="font-bold" to="/page/davidohlin" className="mr-2 text-black no-underline">David</NavLink>
+                    <NavLink activeClassName="font-bold" to="/page/sebastiansson" className="mr-2 text-black no-underline">Sebastian</NavLink>
+                    <NavLink activeClassName="font-bold" to="/page/albinmartinsson91" className="mr-2 text-black no-underline">Albin</NavLink>
+                    <NavLink activeClassName="font-bold" to="/error" className="mr-2 text-black no-underline">404</NavLink>
                 </header>
                 <main>
                     <PoseGroup>

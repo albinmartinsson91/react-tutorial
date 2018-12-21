@@ -1,7 +1,6 @@
 @tailwind preflight;
 @tailwind utilities;
 
-
 .fade-in {
 	animation:fade-in 0.25s;
 }

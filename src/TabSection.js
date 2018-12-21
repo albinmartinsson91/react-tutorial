@@ -1,15 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink, Switch, withRouter } from 'react-router-dom'
 
+
 class TabSection extends React.Component {
 
 	constructor(props) {
         super(props);
     }
 
-	componentDidMount() {
-		
-	}
+    componentDidUpdate() {
+        console.log('tabsection updated')
+    }
+
+    componentDidMount() {
+        console.log('tabsection mounted')
+    }
 
 	render() {
 		return (
