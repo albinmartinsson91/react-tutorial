@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink, Switch, withRouter } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import Posed, { PoseGroup } from 'react-pose';
 
 import About from './About';
 import Projects from './Projects';
@@ -8,6 +9,25 @@ import Home from './Home';
 import Page from './Page';
 import Tabs from './Tabs';
 import PageNotFound from './PageNotFound';
+
+
+//Add Pose Transition Container
+const RouteContainer = Posed.div({
+    enter: {
+    y: 0,
+    opacity: 1,
+    delay: 300,
+    transition: {
+      y: { type: 'spring', stiffness: 1000, damping: 30 },
+      default: { duration: 300 }
+    }
+  },
+  exit: {
+    y: 20,
+    opacity: 0,
+    transition: { duration: 150 }
+  }
+});
 
 class App extends Component {
     render() {
@@ -24,14 +44,18 @@ class App extends Component {
                     <NavLink activeClassName="bg-blue" to="/error" className="mr-2">404</NavLink>
                 </header>
                 <main>
-                    <Switch>
-                        <Route component={Home} exact path="/" />
-                        <Route component={About} path="/about" />
-                        <Route component={Tabs} path="/tabs" />
-                        <Route component={Projects} path="/projects" />
-                        <Route component={Page} path="/page/:username" />
-                        <Route component={PageNotFound} />
-                    </Switch>
+                    <PoseGroup>
+                        <RouteContainer key={this.props.location.key}>
+                            <Switch location={this.props.location}>
+                                <Route component={Home} exact path="/" />
+                                <Route component={About} path="/about" />
+                                <Route component={Tabs} path="/tabs" />
+                                <Route component={Projects} path="/projects" />
+                                <Route component={Page} path="/page/:username" />
+                                <Route component={PageNotFound} />
+                            </Switch>
+                        </RouteContainer>
+                    </PoseGroup>
                 </main>
                 <footer>
                     

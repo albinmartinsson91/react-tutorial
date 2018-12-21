@@ -3,7 +3,7 @@ import React from 'react';
 class User extends React.Component {
 	render() {
 		return (
-			<div className="container p-8">
+			<div className="container p-8 fade-in">
 				<div className="p-4 border rounded">
 					<div className="inline-flex -mx-3">
 						<div className="px-3">
