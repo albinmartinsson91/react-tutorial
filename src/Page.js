@@ -13,9 +13,6 @@ class Page extends React.Component {
     }
 
  	componentWillReceiveProps(nextProps){
- 		this.setState({
- 			user:null
- 		})
 	    this.fetchUser(nextProps.match.params.username)
 	}
 
@@ -44,7 +41,7 @@ class Page extends React.Component {
 		//Render user component if state is set
 		if (!this.state.user) {
 			return (
-				<h2 className="p-8"></h2>
+				<h2 className="p-8">Jag laddar</h2>
 			)
 		}
 		return (

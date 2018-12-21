@@ -8,14 +8,6 @@ class TabSection extends React.Component {
         super(props);
     }
 
-    componentDidUpdate() {
-        console.log('tabsection updated')
-    }
-
-    componentDidMount() {
-        console.log('tabsection mounted')
-    }
-
 	render() {
 		return (
 			<h1>{this.props.match.params.section}</h1>

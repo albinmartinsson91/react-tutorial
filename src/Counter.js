@@ -17,6 +17,9 @@ class Counter extends React.Component {
 			count: this.state.count + 1
 		})
 	}
+ 	componentDidMount() {
+ 		console.log("Counter Mounted");
+ 	}
 
 	render() {
 		return <div className="inline-flex justify-between w-full items-center">

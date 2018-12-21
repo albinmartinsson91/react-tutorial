@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, NavLink, Switch, withRouter } from 'react-router-dom'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import Posed, { PoseGroup } from 'react-pose';
+import Posed, { PoseGroup } from 'react-pose'
 
 import About from './About';
 import Projects from './Projects';
@@ -10,8 +10,6 @@ import Page from './Page';
 import Tabs from './Tabs';
 import PageNotFound from './PageNotFound';
 
-
-//Add Pose Transition Container
 const RouteContainer = Posed.div({
     enter: {
     y: 0,
