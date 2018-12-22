@@ -32,15 +32,18 @@ class Tabs extends React.Component {
 			<div className="container p-8">
 				<h1>Tabs</h1>
 				<div className="py-3">
-                	<Link to="/tabs/settings" className="mr-2">Settings</Link>
-                	<Link to="/tabs/profile">Profile</Link>
+                	<NavLink activeClassName="font-bold" to="/tabs/settings" className="mr-2 text-black no-underline">Settings</NavLink>
+                	<NavLink activeClassName="font-bold" to="/tabs/profile" className="mr-2 text-black no-underline">Profile</NavLink>
                 </div>
                 <hr className="bg-grey h-px" />
                 <div className="py-4">
+                    {/*Sets the initial route to settings - Adds unexpected behavior if the url is changed in browser to /tabs/profile*/}
+                    <Redirect from="/tabs" exact to="/tabs/settings" />
                     <PoseGroup animateOnMount="true">
-                    {/* We check for the first part of the route to avoid nested route animation */}
                         <TabsRouteContainer key={this.props.location.pathname}>
-                            <Route path="/tabs/:section" component={TabSection}/>
+                            <Switch location={this.props.location}>
+                                <Route path="/tabs/:section" component={TabSection}/>
+                            </Switch>
                         </TabsRouteContainer>
                     </PoseGroup>
                 </div>
