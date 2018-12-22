@@ -42,8 +42,9 @@ class App extends Component {
                     <NavLink activeClassName="font-bold" to="/error" className="mr-2 text-black no-underline">404</NavLink>
                 </header>
                 <main>
-                    <PoseGroup>
-                        <RouteContainer key={this.props.location.pathname}>
+                    <PoseGroup animateOnMount="true">
+                        {/* We check for the first part of the route to avoid nested route animation */}
+                        <RouteContainer key={this.props.location.pathname.split('/')[1]}>
                             <Switch location={this.props.location}>
                                 <Route component={Home} exact path="/" />
                                 <Route component={About} path="/about" />
