@@ -8,16 +8,26 @@ import Projects from './Projects';
 import Home from './Home';
 import Page from './Page';
 import Tabs from './Tabs';
+import ReduxCounter from './ReduxCounter';
 import PageNotFound from './PageNotFound';
+
+import { connect } from 'react-redux'
+import store from './store'
+
+const mapStateToProps = store => {
+    return {
+        count: store.counter
+    }
+}
 
 const RouteContainer = Posed.div({
     enter: {
     y: 0,
     opacity: 1,
-    delay: 300,
+    delay: 200,
     transition: {
       y: { type: 'spring', stiffness: 1000, damping: 30 },
-      default: { duration: 300 }
+      default: { duration: 200 }
     }
   },
   exit: {
@@ -39,7 +49,9 @@ class App extends Component {
                     <NavLink activeClassName="font-bold" to="/page/davidohlin" className="mr-2 text-black no-underline">David</NavLink>
                     <NavLink activeClassName="font-bold" to="/page/sebastiansson" className="mr-2 text-black no-underline">Sebastian</NavLink>
                     <NavLink activeClassName="font-bold" to="/page/albinmartinsson91" className="mr-2 text-black no-underline">Albin</NavLink>
+                    <NavLink activeClassName="font-bold" to="/redux-counter" className="mr-2 text-black no-underline">Redux Counter</NavLink>
                     <NavLink activeClassName="font-bold" to="/error" className="mr-2 text-black no-underline">404</NavLink>
+                    <span>Current Count: {this.props.count} </span>
                 </header>
                 <main>
                     <PoseGroup animateOnMount="true">
@@ -50,6 +62,7 @@ class App extends Component {
                                 <Route component={About} path="/about" />
                                 <Route component={Tabs} path="/tabs" />
                                 <Route component={Projects} path="/projects" />
+                                <Route component={ReduxCounter} path="/redux-counter" />
                                 <Route component={Page} path="/page/:username" />
                                 <Route component={PageNotFound} />
                             </Switch>
@@ -64,4 +77,4 @@ class App extends Component {
     }
 }
 
-export default withRouter(App);
+export default withRouter(connect(mapStateToProps)(App));

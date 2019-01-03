@@ -5,11 +5,21 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
+//Create Store Redux
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+
+//Import Counter Reducer Function
+import store from './store'
+
+
 ReactDOM.render(
-	//Wraps Router around our app so that we can access match, location 
-	<BrowserRouter>
-		<App />
-   	</BrowserRouter>
+	//Wraps Router around our app so that we can access match, location
+	<Provider store={store}> 
+		<BrowserRouter>
+			<App />
+	   	</BrowserRouter>
+   	</Provider>
  	, document.getElementById('root')
 	);
 
